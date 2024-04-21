@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: hsl(232deg 31.91% 9.22%);
+    background-image: linear-gradient(to left,#181b50,#232671);
+    padding: 0 60px;
+    position: relative;
+}
+
+@keyframes op{
+    0%{
+        width: 100;
+        left: 0;
+        opacity: 100%;
+    }
+    100%{
+        width: calc(100% + 10px);
+        left: 100%;
+        opacity: 0%;
+    }
+}
+
+#nav{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    #logo{
+        width: 20%;
+        height: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+
+        #logo img{
+            width: 68px;
+            height: 68px;
+        }
+        #logo h1{
+            color: rgb(251, 244, 244);
+        }
+
+    #mid-nav{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 230px;
+    }
+        #mid-nav h2{
+            color: hsl(237, 13%, 34%);
+
+        }
+        #mid-nav h2::after {
+            content: '';
+            display: flex;
+            width: 0;
+            height: 3px;
+            background-color: azure; /* You can change the color as needed */
+            margin-top: 2px; /* Adjust as needed */
+            border-radius: 50px;
+            margin-left: -5px;
+        }
+
+        #mid-nav h2:hover::after{
+            /* animation-name: op;
+            animation-duration: 0.8s; */
+            animation: op 1s infinite;
+        }
+#about{
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(251, 244, 244);
+}
+#about p{
+    padding-top: 7px;
+}
+
+#upload{
+    height: 42%;
+    width: 70%;
+    margin-top: 40px;
+    background-color: #171c33c1;
+    transform: translate(200px);
+    border-radius: 20px;
+    text-align: center;
+    color: hsl(236, 12%, 49%);  
+}
+#upload #text {
+   padding-top: 70px;
+}
+#text h2{
+    padding-bottom: 15px;
+}
+#choose{
+    padding-top: 40px;
+} 
+input[type="file"] {
+    
+}
